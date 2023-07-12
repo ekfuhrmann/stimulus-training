@@ -2,7 +2,7 @@
 
 ## 👀 Description
 
-This project is intended as an exercise project to get familiar with using [Stimulus](https://stimulus.hotwired.dev/). The project is built within an Astro framework, though the `html` and `js` written here would be similar to any other project.
+This project is intended as an exercise project to get familiar with using [Stimulus](https://stimulus.hotwired.dev/). The project is built within an Astro framework, though the `html` and `js` written here would be similar to most other frameworks.
 
 ## 🎉 Getting Started
 
@@ -10,7 +10,7 @@ This project is intended as an exercise project to get familiar with using [Stim
 - The Stimulus Controller scaffolding and comments can be found at `src/scripts/controllers/password-validation_controller.js`
 - Reference the [Stimuls Docs](https://stimulus.hotwired.dev/reference/controllers) as necessary or view a completed solution in the [solution](https://github.com/ekfuhrmann/stimulus-training/tree/solution) branch of this project.
 
-## ✅ Objectives
+## ✅ Objective
 
 Using stimulus, add the following form validation:
 
@@ -20,6 +20,8 @@ Using stimulus, add the following form validation:
 - Validate that the password has at least 1 special character
 - Validate that the password and password confirmation fields match when filled
 - The form `submit` button should be `disabled` until all fields validate.
+
+![pw](https://github.com/ekfuhrmann/stimulus-training/assets/8878152/8ff8aaba-fced-4c77-8342-a664a69b1232)
 
 ## 🧞 Commands
 
