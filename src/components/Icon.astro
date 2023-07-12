@@ -1,0 +1,20 @@
+---
+export interface Props {
+  icon: string;
+  classes?: string;
+}
+
+const { icon, classes } = Astro.props;
+
+function addClassesToInnerHTMLString(innerHTML: string, classes?: string) {
+  return innerHTML.replace(
+    /^<svg/,
+    `<svg ${classes ? `class="${classes}"` : ""}`
+  );
+}
+
+const { default: svg } = await import(`../assets/icons/${icon}.svg?raw`);
+const innerHTML = addClassesToInnerHTMLString(svg, classes);
+---
+
+<Fragment set:html={innerHTML} />

@@ -1,15 +1,101 @@
 ---
+import Icon from "../components/Icon.astro";
 ---
 
+<script>
+  import "../scripts/app.js";
+</script>
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main
+      class="mx-auto flex min-h-[100dvh] max-w-xl items-center justify-center p-56"
+    >
+      <div class="flex w-full flex-col gap-56 p-56">
+        <h1 class="text-center text-xl font-bold">Create an account</h1>
+        <form action="#" class="flex w-full flex-col items-start gap-24">
+          <div class="field-wrapper">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required />
+          </div>
+          <div class="field-wrapper">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required />
+          </div>
+          <ul
+            class="list-none space-y-8 text-sm font-semibold text-secondary-text"
+          >
+            <li class="validation__item">
+              <Icon icon="close" classes="validation__icon--invalid" />
+              <Icon icon="check" classes="validation__icon--valid" />
+              8-32 characters
+            </li>
+            <li class="validation__item">
+              <Icon icon="close" classes="validation__icon--invalid" />
+              <Icon icon="check" classes="validation__icon--valid" />
+              At least 1 Uppercase letter
+            </li>
+            <li class="validation__item">
+              <Icon icon="close" classes="validation__icon--invalid" />
+              <Icon icon="check" classes="validation__icon--valid" />
+              At least 1 Number
+            </li>
+            <li class="validation__item">
+              <Icon icon="close" classes="validation__icon--invalid" />
+              <Icon icon="check" classes="validation__icon--valid" />
+              At least 1 Special character
+            </li>
+            <li class="validation__item hidden">
+              <Icon icon="close" classes="validation__icon--invalid" />
+              <Icon icon="check" classes="validation__icon--valid" />
+              Password confirmation matches
+            </li>
+          </ul>
+          <div class="field-wrapper">
+            <label for="password-confirm">Password Confirmation</label>
+            <input
+              type="password"
+              name="password-confirm"
+              id="password-confirm"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="rounded-8 py-4 mt-16 inline-flex min-h-40 shrink-0 items-center justify-center gap-8 rounded bg-blue-500 px-16 text-center font-semibold text-white transition-colors duration-200 hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-blue-700 disabled:!bg-blue-50 disabled:!text-blue-300 disabled:!ring-gray-200"
+            >Create Account</button
+          >
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
+
+<style is:global>
+  .validation__item {
+    @apply flex items-center gap-8;
+  }
+
+  .validation__icon--invalid {
+    @apply h-16 w-16 fill-red-500;
+
+    [data-state="valid"] & {
+      @apply hidden;
+    }
+  }
+
+  .validation__icon--valid {
+    @apply hidden h-16 w-16 fill-green-500;
+
+    [data-state="valid"] & {
+      @apply inline-block;
+    }
+  }
+</style>
