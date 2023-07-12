@@ -1,11 +1,12 @@
-// regex helpers
+import { Controller } from "@hotwired/stimulus";
 
-/**
- * REGEX Helpers
- *
- * check length
- * check uppercase: /[A-Z]/
- * check number: /\d/
- * check special character: /[!"#$%&'()*+,-.\\/:;<=>?@[\]^_`{|}~]/
- * check fields match
- */
+export default class extends Controller {
+  // add targets
+  // add values
+  // set values
+  // handle length validation
+  // handle uppercase validation (regex: /[A-Z]/)
+  // handle number validation (regex: /\d/)
+  // handle special character validation (regex: /[!"#$%&'()*+,-.\\/:;<=>?@[\]^_`{|}~]/)
+  // handle PW fields match validation
+}

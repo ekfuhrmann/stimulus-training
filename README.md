@@ -1,33 +1,25 @@
-# Astro Starter Kit: Minimal
+# Stimulus Training Example
 
-```
-npm create astro@latest -- --template minimal
-```
+## 👀 Description
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+This project is intended as an exercise project to get familiar with using [Stimulus](https://stimulus.hotwired.dev/). The project is built within an Astro framework, though the `html` and `js` written here would be similar to any other project.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎉 Getting Started
 
-## 🚀 Project Structure
+- The DOM markup for the page can be found at `src/pages/index.astro`
+- The Stimulus Controller scaffolding and comments can be found at `src/scripts/controllers/password-validation_controller.js`
+- Reference the [Stimuls Docs](https://stimulus.hotwired.dev/reference/controllers) as necessary or view a completed solution in the [solution](https://github.com/ekfuhrmann/stimulus-training/tree/solution) branch of this project.
 
-Inside of your Astro project, you'll see the following folders and files:
+## ✅ Objectives
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Using stimulus, add the following form validation:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+- Validate the length of the password field (8-32 characters)
+- Validate that the password has at least 1 uppercase character
+- Validate that the password has at least 1 number
+- Validate that the password has at least 1 special character
+- Validate that the password and password confirmation fields match when filled
+- The form `submit` button should be `disabled` until all fields validate.
 
 ## 🧞 Commands
 
@@ -41,7 +33,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
