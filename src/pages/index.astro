@@ -32,27 +32,28 @@ import Icon from "../components/Icon.astro";
           <ul
             class="list-none space-y-8 text-sm font-semibold text-secondary-text"
           >
-            <li class="validation__item">
+            <!-- NOTE: use `data-state=valid/invalid` to switch icons -->
+            <li class="validation__item" data-state="invalid">
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               8-32 characters
             </li>
-            <li class="validation__item">
+            <li class="validation__item" data-state="invalid">
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               At least 1 Uppercase letter
             </li>
-            <li class="validation__item">
+            <li class="validation__item" data-state="invalid">
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               At least 1 Number
             </li>
-            <li class="validation__item">
+            <li class="validation__item" data-state="invalid">
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               At least 1 Special character
             </li>
-            <li class="validation__item">
+            <li class="validation__item" data-state="invalid">
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               Password confirmation matches
