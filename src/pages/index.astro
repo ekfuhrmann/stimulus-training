@@ -20,40 +20,70 @@ import Icon from "../components/Icon.astro";
     >
       <div class="flex w-full flex-col gap-56 p-56">
         <h1 class="text-center text-xl font-bold">Create an account</h1>
-        <form action="#" class="flex w-full flex-col items-start gap-24">
+        <form
+          action="#"
+          class="flex w-full flex-col items-start gap-24"
+          data-controller="password-validation"
+        >
           <div class="field-wrapper">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required />
           </div>
           <div class="field-wrapper">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" required />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              data-action="password-validation#setPasswordValue"
+              required
+            />
           </div>
           <ul
             class="list-none space-y-8 text-sm font-semibold text-secondary-text"
           >
             <!-- NOTE: use `data-state=valid/invalid` to switch icons -->
-            <li class="validation__item" data-state="invalid">
+            <li
+              class="validation__item"
+              data-state="invalid"
+              data-password-validation-target="count"
+            >
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               8-32 characters
             </li>
-            <li class="validation__item" data-state="invalid">
+            <li
+              class="validation__item"
+              data-state="invalid"
+              data-password-validation-target="uppercase"
+            >
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               At least 1 Uppercase letter
             </li>
-            <li class="validation__item" data-state="invalid">
+            <li
+              class="validation__item"
+              data-state="invalid"
+              data-password-validation-target="number"
+            >
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               At least 1 Number
             </li>
-            <li class="validation__item" data-state="invalid">
+            <li
+              class="validation__item"
+              data-state="invalid"
+              data-password-validation-target="special"
+            >
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               At least 1 Special character
             </li>
-            <li class="validation__item" data-state="invalid">
+            <li
+              class="validation__item"
+              data-state="invalid"
+              data-password-validation-target="confirmation"
+            >
               <Icon icon="close" classes="validation__icon--invalid" />
               <Icon icon="check" classes="validation__icon--valid" />
               Password confirmation matches
@@ -65,13 +95,14 @@ import Icon from "../components/Icon.astro";
               type="password"
               name="password-confirm"
               id="password-confirm"
+              data-action="password-validation#setPasswordConfirmationValue"
               required
             />
           </div>
           <button
             type="submit"
             class="rounded-8 py-4 mt-16 inline-flex min-h-40 shrink-0 items-center justify-center gap-8 rounded bg-blue-500 px-16 text-center font-semibold text-white transition-colors duration-200 hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-blue-700 disabled:!bg-blue-50 disabled:!text-blue-300 disabled:!ring-gray-200"
-            >Create Account</button
+            data-password-validation-target="submit">Create Account</button
           >
         </form>
       </div>
