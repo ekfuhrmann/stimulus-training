@@ -8,11 +8,11 @@ This project is intended as an exercise project to get familiar with using [Stim
 
 - The DOM markup for the page can be found at `src/pages/index.astro`
 - The Stimulus Controller scaffolding and comments can be found at `src/scripts/controllers/password-validation_controller.js`
-- Reference the [Stimuls Docs](https://stimulus.hotwired.dev/reference/controllers) as necessary or view a completed solution in the [solution](https://github.com/ekfuhrmann/stimulus-training/tree/solution) branch of this project.
+- Reference the [Stimulus Docs](https://stimulus.hotwired.dev/reference/controllers) as necessary or view a completed solution in the [solution](https://github.com/ekfuhrmann/stimulus-training/tree/solution) branch of this project.
 
 ## ✅ Objective
 
-Using stimulus, add the following form validation:
+Using Stimulus, add the following form validation:
 
 - Validate the length of the password field (8-32 characters)
 - Validate that the password has at least 1 uppercase character
